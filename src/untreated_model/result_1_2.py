@@ -1,6 +1,7 @@
 # Packages
 import numpy as np 
 import matplotlib.pyplot as plt
+rng = np.random.default_rng()
 
 # Import functions from shared model
 from ecDNA_dynamics_model import evolve_population
