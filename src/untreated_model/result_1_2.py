@@ -57,7 +57,7 @@ plt.tight_layout()
 plt.show()
 
 
-# Output: src/untreated_model/figures/population_composition.png 
+# Output: src/untreated_model/result_1.2_population_composition.png
 
 
 
