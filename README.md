@@ -14,7 +14,7 @@ This model simulates ecDNA dynamics that drive tumour evolution and treatment re
 - **Excision**: the reverse - an integrated ecDNA is excised back from the chromosome, returning the HSR
   amplification to an ecDNA amplification.
   
-## Project aims
+## Project aims 
 
 1. Investigate how reintegration and excision shape copy-number distributions and population composition
    during tumour evolution in the absence of therapy.
