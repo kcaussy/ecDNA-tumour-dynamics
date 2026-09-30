@@ -1,4 +1,4 @@
-# ecDNA Tumour Dynamics
+# The evolution of tumours with dynamic reintegration and excision of extrachromosomal DNA
 A stochastic, agent-based model of **extrachromosomal DNA (ecDNA) dynamics** 
 during tumour evolution and treatment response.
 
@@ -22,7 +22,7 @@ This model simulates ecDNA dynamics that drive tumour evolution and treatment re
    in population composition and copy-number distributions, and to determine whether ecDNA dynamics provide a
    mechanistic explanation for therapeutic resistance.
 
-### Repository structure
+## Repository structure
 - ['src/ecDNA_dynamics_model.py'](src/ecDNA_dynamics_model.py) - the overall/shared stochastic Gillespie model, used as the basis for both the untreated and treated model
 - the original two-state population (validation) model.
 - untreated tumour evolution model (code & plots) [Aim 1]
