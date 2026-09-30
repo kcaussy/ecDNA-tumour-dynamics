@@ -6,7 +6,7 @@ during tumour evolution and treatment response.
 
 Approximately 17% of cancers harbour amplified oncogenes on extrachromosomal DNA (ecDNA), with
 ecDNA prevalence increasing three-fold in more aggressive tumours. These segments of amplified DNA
-undergo random segregation, allowing rapid and heritable changes in ecDNA copy number which contributes to
+undergo random segregation, allowing rapid and extreme changes in ecDNA copy number which contributes to
 tumour evolution and drug resistance. 
 
 This model simulates ecDNA dynamics that drive tumour evolution and treatment resistance:
