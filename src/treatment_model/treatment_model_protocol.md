@@ -11,7 +11,7 @@ presented in the overall schematic shown below.
   <img src="treatment_protocol.png" width="700">
 </p>
 
-> Schematic 1. **Three-phase treatment protocol**. The first phase demonstrates population growth to a target population size (Ntarget = 105 cells) under standard growth dynamics (Growth) (1). The 
+> Schematic 1. **Three-phase treatment protocol**. The first phase demonstrates population growth to a target population size (Ntarget = 10^5 cells) under standard growth dynamics (Growth) (1). The 
 population then undergoes an instantaneous treatment event (dashed red line) which removes 90% of the population, each cell’s probability of death is weighted by its total copy number (1+e+h),
 reducing the population to ~10% of Ntarget (10,000 cells) (2). The surviving cells are regrown to the original target size (Regrowth) (3). This diagram illustrates the phase structure of the protocol.
 Lines are schematic but roughly demonstrate exponential growth of the tumour. The schematic illustrates the protocol over time, with time represented in generations.
@@ -50,40 +50,35 @@ low-copy cells.
 
 > Code: 
 ```
-# weight = 1 + e + h --> total copies, plus 1 baseline so zero-copy cells aren't immune 
-# we do the total copies (e+h) as we simulating dosage-based therapy (higher copies get killed) 
-# we use a baseline line of 1 as we have ecDNA- cells, this means that ecDNA- cells arent totally safe
+# Weight = 1 + e + h --> total copies, plus 1 baseline so zero-copy cells aren't immune 
+# we do the total copies (e+h) as we simulating dosage-based therapy (higher copies get killed). 
+# We use a baseline line of 1 as we have ecDNA- cells, this means that ecDNA- cells arent totally safe
 # from treatment. (we add a small chance that ecDNA- cells can die from treatment as 0 copy cells
 # would be totally immune, so total copy number for ecDNA- cells are 1) 
 
-# extract ecDNA and HSR copies from population array 
+# Extract ecDNA and HSR copies from population array 
 ecDNA_copies = population[:next_slot, 0] # ecDNA
 HSR_copies = population[:next_slot, 1] # HSR 
 
-# death probability proportional to total copy number
+# Death probability proportional to total copy number
 weighted_copies = 1 + ecDNA_copies + HSR_copies
 
-# turn the weighted copies into probabilities (easier than just handling the copies alone) 
-# do this by dividing a copy in the population over the total sum of the copies 
+# Turn the weighted copies into probabilities (easier than just handling the copies alone) 
+# Do this by dividing a copy in the population over the total sum of the copies 
 weighted_probabilities = weighted_copies / np.sum(weighted_copies)
 
-# we need cells to choose from - create an array where all the cells in the population (next_slot) are numbered 
+# We need cells to choose from - create an array where all the cells in the population (next_slot) are numbered 
 cell_indices = np.arange(next_slot) 
 
-# how many deaths in the population - create a variable that defines the size (90%) of the population that will be killed 
+# How many deaths in the population - create a variable that defines the size (90%) of the population that will be killed 
 n_kills = int(0.9 * next_slot)
 
-# choose which cells to die - even though we are eliminating 90% of the population, the cells to die must have higher copies
-# the index for the ones that are selected to die need to also be noted
+# Choose which cells to die - even though we are eliminating 90% of the population, the cells to die must have higher copies
+# The index for the ones that are selected to die need to also be noted
 cells_to_kill = rng.choice(cell_indices, size=n_kills, replace=False, p=weighted_probabilities)
 
-# need to remove the cells from the population but also keep the surviving 10% 
+# Need to remove the cells from the population but also keep the surviving 10% 
 surviving_population = np.delete(population[:next_slot], cells_to_kill, axis=0)
-
-# test 
-print("before treatment:", next_slot)
-print("after treatment:", len(surviving_population))
-print("surviving fraction:", len(surviving_population)/next_slot)
 ```
 
 
