@@ -8,7 +8,7 @@ To address aim 2, the model undergoes an instantaneous treatment event to see ho
 presented in the overall schematic shown below. 
 
 <p align="center">
-  <img src="src/treatment_model/treatment_protocol.png" width="700">
+  <img src="treatment_protocol.png" width="700">
 </p>
 
 > Schematic 1. **Three-phase treatment protocol**. The first phase demonstrates population growth to a target population size (Ntarget = 105 cells) under standard growth dynamics (Growth) (1). The 
