@@ -7,11 +7,6 @@ This .md file presents the treatment protocol which investigates aim 2.
 To address aim 2, the model undergoes an instantaneous treatment event to see how treatment influences ecDNA tumour dynamics. However, carrying out these aims requires three phases, this 
 presented in the overall schematic shown below. 
 
- The surviving population then undergoes regrowth with the same simulation parameters as
-the initial growth phase, until the same target population is reached, resembling post-treatment growth ((schematic 1.3). 
-
-
-
 <p align="center">
   <img src="src/treatment_model/treatment_protocol.png" width="700">
 </p>
@@ -95,7 +90,7 @@ print("surviving fraction:", len(surviving_population)/next_slot)
 ## Phase 3: post-treatment regrowth
 
 The surviving population then undergoes regrowth with the same simulation parameters as the initial growth phase, until the same target population is reached, 
-resembling post-treatment growth ((schematic 1.3). 
+resembling post-treatment growth (schematic 1.3). 
 
 The original Gillespie loop is adapted to regrow the population after treatment. Therefore the loop grows the population from the surviving population to once again 100,000 cells (target population). 
 
