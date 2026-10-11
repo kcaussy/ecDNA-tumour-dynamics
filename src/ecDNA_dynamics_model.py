@@ -12,7 +12,7 @@ The model contains the following functions:
     cell_to_die_Func         - background cell death (shared across all three states)
     evolve_population        - the Gillespie loop tying the above together
 
-And is used by: simulations/untreated_model.py and simulations/treatment_model.py
+And is used by: untreated model and treatment model
 """
 
 
