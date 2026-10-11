@@ -24,7 +24,7 @@ This model simulates ecDNA dynamics that drive tumour evolution and treatment re
 
 ## Repository structure
 - [ecDNA_dynamics_model](src/ecDNA_dynamics_model.py) - the overall/shared stochastic Gillespie model, used as the basis for both the untreated and treatment model
-- [base/validation model](src/base_validation_model) - the original two-state population (validation) model.
+- [base/validation model](src/base_validation_model) - the original two-state population (validation) model (code + plots)
 - [untreated_model](src/untreated_model) - untreated tumour evolution model (code & plots) [Aim 1]
 - [treatment_model](src/treatment_model) - treatment model (protocol, code & plots) [Aim 2] 
 
