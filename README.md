@@ -56,7 +56,7 @@ The model demonstrates that reintegration shifts the distribution by suppressing
 
 
 #### 1.4. Reintegration and excision emergence appears sequentially
-As both events coexist in the model, tracking when each occurs reveals the sequence in which HSR emerges and excision surfaces. The model demonstrates that reintegration and excision occurs sequentially and depends on an established ecDNA+ population. The model also reveals that even though reintegration climbs as the population grows, excision peaks and subsequently declines, this may the result of specific modelling rules in the ![ecDNA dynamics model](src/ecDNA_dynamics_model.py).
+As both events coexist in the model, tracking when each occurs reveals the sequence in which HSR emerges and excision surfaces. The model demonstrates that reintegration and excision occurs sequentially and depends on an established ecDNA+ population. The model also reveals that even though reintegration climbs as the population grows, excision peaks and subsequently declines, this may the result of specific modelling rules in the ecDNA dynamics model.
 
 
 <p align="center">
