@@ -19,7 +19,7 @@ Under both selection regimes, the simulated curves closely tracked the reference
 neutral selection (ecDNA+ accumulates through one-directional loss). Wide standard deviation bands at small N narrow as the population grows and as averaging increases. 
 
 <p align="center">
-  <img src="base_validation_model/validation.png" width="700">
+  <img src= "base_validation_model/validation.png" width="700">
 </p>
 
 > **Validation of the base model against Lange et al. (2022)**. The base model was validated by comparing its output (dashed lines) against reference data from Lange et al. (2022) (solid lines),
@@ -30,7 +30,9 @@ neutral selection (ecDNA+ accumulates through one-directional loss). Wide standa
 The simulated ecDNA- fractions closely matched the reference data under both selection regimes, this confirmed that the base model reproduces established ecDNA dynamics before the addition of death, 
 reintegration, and excision, and therefore the addition of these processes can now be implemented.
 
+Code availability: [src/base_validation/s1_s3_validation.py](src/base_validation/s1_s3_validation.py)
 
 
 ## References
 Lange, J.T. et al. (2022) ‘The evolutionary dynamics of extrachromosomal DNA in human cancers’, Nature Genetics, 54(10), pp. 1527–1533. Available at: https://doi.org/10.1038/s41588-022-01177-x.
+
