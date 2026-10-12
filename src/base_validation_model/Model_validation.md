@@ -19,7 +19,7 @@ Under both selection regimes, the simulated curves closely tracked the reference
 neutral selection (ecDNA+ accumulates through one-directional loss). Wide standard deviation bands at small N narrow as the population grows and as averaging increases. 
 
 <p align="center">
-  <img src= "base_validation_model/validation.png" width="700">
+  <img src= "validation.png" width="700">
 </p>
 
 > **Validation of the base model against Lange et al. (2022)**. The base model was validated by comparing its output (dashed lines) against reference data from Lange et al. (2022) (solid lines),
