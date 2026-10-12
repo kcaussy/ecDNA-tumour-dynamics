@@ -9,7 +9,7 @@ validating the model against an known published ecDNA model in current literatur
 works accordingly and therefore, the addition of reintegration, cell death, and excision to the model. 
 
 ## How?
-The [base model's](src/base_validation_model/base_validation_model.py) output was compared against reference data from Lange and colleagues (2022), using the mean ecDNA-negative (ecDNA-) cell fraction under
+The [base model's](base_validation_model.py) output was compared against reference data from Lange and colleagues (2022), using the mean ecDNA-negative (ecDNA-) cell fraction under
 neutral (s=1) and positive (s=3) selection. Simulations were also ran death-free, to match the framework of Lange and colleagues (2022) starting from a single ecDNA+ cell (one copy) and averaged across 100 independent runs.
 
 ! Selection parameter choices are made according to the reference data.
@@ -30,7 +30,7 @@ neutral selection (ecDNA+ accumulates through one-directional loss). Wide standa
 The simulated ecDNA- fractions closely matched the reference data under both selection regimes, this confirmed that the base model reproduces established ecDNA dynamics before the addition of death, 
 reintegration, and excision, and therefore the addition of these processes can now be implemented.
 
-Code availability: [src/base_validation/s1_s3_validation.py](src/base_validation/s1_s3_validation.py)
+Code availability: [src/base_validation/s1_s3_validation.py](s1_s3_validation.py)
 
 
 ## References
