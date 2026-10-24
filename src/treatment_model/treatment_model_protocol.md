@@ -25,7 +25,7 @@ ecDNA-positive tumour (schematic 1.1).
 The initial growth of the population is carried out by the [shared ecDNA dynamics model](src/ecDNA_dynamics_model.py).
 
 > Code: 
-```
+```python
 # Set parameters 
 s = 1.5
 r = 1.2 
@@ -49,7 +49,7 @@ kill where each cell’s probability of death is weighted by its total copy numb
 low-copy cells.
 
 > Code: 
-```
+```python
 # Weight = 1 + e + h --> total copies, plus 1 baseline so zero-copy cells aren't immune 
 # The total copies (e+h) are used as we are simulating dosage-based therapy where cells with higher
 # copies, are more likely to be killed 
@@ -92,7 +92,7 @@ The original Gillespie loop is adapted to regrow the population after treatment.
 
 
 > Code:
-```
+```python
 def evolve_population_after_treatment(surviving_population, s, N_target, checkpoint_sizes, p_integrate, r, k, p_excision): 
 
 # Initialise the simulation using the surviving post-treatment population rather than a single found ecDNA+ cell 
@@ -174,7 +174,7 @@ def evolve_population_after_treatment(surviving_population, s, N_target, checkpo
 Overall, the treatment protocol is carried out in the following manner over multiple runs to counteract noisy results: 
 
 > Code:
-```
+```python
 # Set parameters 
 s = 1.5
 r = 1.2 
