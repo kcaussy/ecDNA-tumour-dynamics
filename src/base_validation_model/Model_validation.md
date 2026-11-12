@@ -4,7 +4,7 @@ This README file describes the steps taken to validate the basic ecDNA model bef
 
 ## Why?
 Within this project the effects of reintegration and excision on ecDNA population dynamics are examined. However, the basic mechanics of the model, such as establishing the known 
-[two-state population](src/base_validation_model/result_1_1.png), will give confidence that the model works as intended before the addition of parameters or events. This is done by 
+[two-state population](src/base_validation_model/result_1_1_population_validation.png), will give confidence that the model works as intended before the addition of parameters or events. This is done by 
 validating the model against an known published ecDNA model in current literature. If the current model produces similar results to that of a published ecDNA model, the base of the model
 works accordingly and therefore, the addition of reintegration, cell death, and excision to the model. 
 
